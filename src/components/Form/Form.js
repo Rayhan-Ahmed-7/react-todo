@@ -13,7 +13,7 @@ const Form = ({setInputText,setTodos,todos,inputText}) => {
         <div>
             <form action="">
                 <input onChange={eventHandler} type="text" value={inputText} className="todo-input" />
-                <button onClick={addTodo} className="todo-button" type="submit">
+                <button disabled={!inputText? true:false} onClick={addTodo} className="todo-button" type="submit">
                     <i className="fas fa-plus-square"></i>
                 </button>
             </form>
